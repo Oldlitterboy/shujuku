@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/05-zhuce/" method="post" align=center>
+        {% csrf_token %}
+    <!-- <p>姓名<input type="text" name='uname'></p>
+    <p> 年龄 <input type="text" name='uage'></p>
+    <p>  邮箱 <input type="email" name='uemail'></p> -->
+    {{form.as_p}}
+    <p><input type="submit" ></p>
+    </form>
+</body>
+</html>

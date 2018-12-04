@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src='/static/js/jquery-1.11.3.js'></script>
+    <script>
+    function btnajax(){
+        $.get('/12-server/',function(data){
+            $.each(data,function(i,obj){
+                console.log('id:'+obj.pk)
+                console.log('name:'+obj.fields.name)
+                console.log('age:'+obj.fields.age)
+                console.log('email:'+obj.fields.email)
+                // console.log('isActive:'+obj.fields.isActive)
+            })
+            
+        },'json')
+    }
+    </script>
+</head>
+<body>
+    <button onclick="btnajax()">ajax请求</button>
+</body>
+</html>
